@@ -230,28 +230,35 @@
         width: fit-content;
         max-width: 100%;
         align-items: center;
-        /* Center items on mobile */
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
     .label {
         white-space: normal;
-        /* Allow wrapping on mobile */
         text-align: center;
         font-size: 0.8rem;
-        /* Slightly smaller on mobile */
+        overflow-wrap: break-word;
+        width: 100%;
     }
 
     .aiTagline {
         width: 100%;
-        /* Full width of the container */
         padding: 0.5rem 1rem;
-        /* Add padding back for mobile readability */
         font-size: 0.85rem;
         white-space: normal;
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    .buttonGroup {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
     }
 
     .headline {
         font-size: clamp(2.5rem, 10vw, 4rem);
-        /* Adjust headline size */
     }
 }

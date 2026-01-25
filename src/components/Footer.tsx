@@ -1,4 +1,7 @@
+"use client";
+
 import React from 'react';
+import Link from 'next/link';
 import { Container } from './ui/Container';
 import styles from './Footer.module.css';
 import { Twitter, Linkedin, Github } from 'lucide-react';
@@ -11,7 +14,12 @@ export const Footer = () => {
                 <div className={styles.grid}>
                     <div className={styles.brand}>
                         <div className={styles.logo}>
-                            <Logo />
+                            <Link
+                                href="/"
+                                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                            >
+                                <Logo />
+                            </Link>
                         </div>
                         <div className={styles.tagline}>
                             <p>A Global AI Tech Holding Company.</p>
@@ -22,9 +30,9 @@ export const Footer = () => {
 
                     <div className={styles.links}>
                         <h4>Company</h4>
-                        <a href="#about">About</a>
-                        <a href="#portfolio">Subsidiaries</a>
-                        <a href="#roadmap">Roadmap</a>
+                        <a href="/#about">About</a>
+                        <a href="/#portfolio">Subsidiaries</a>
+                        <a href="/#roadmap">Roadmap</a>
                         <a href="#">Careers</a>
                     </div>
 
@@ -43,7 +51,7 @@ export const Footer = () => {
                             <a href="#"><Github size={20} /></a>
                         </div>
                         <div className={styles.address}>
-                            <p>Pangyo AI Center</p>
+                            <p>Echorbe Pangyo AI Center</p>
                             <p>Osan AI & Robotics Tech Institute</p>
                             <p>South Korea</p>
                             <p>contact@echorbe.ai</p>

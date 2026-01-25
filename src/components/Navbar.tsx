@@ -27,21 +27,19 @@ export const Navbar = () => {
                     <Link
                         href="/"
                         className={styles.logoLink}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }}
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                     >
                         <Logo />
                     </Link>
                 </div>
 
                 <nav className={styles.desktopNav}>
-                    <a href="#leadership" className={styles.navLink}>About</a>
-                    <a href="#technology" className={styles.navLink}>Technology</a>
-                    <a href="#portfolio" className={styles.navLink}>Portfolio</a>
-                    <a href="#roadmap" className={styles.navLink}>Roadmap</a>
-                    <a href="#contact" className={styles.ctaLink}>Contact</a>
+                    <a href="/#leadership" className={styles.navLink}>About</a>
+                    <a href="/#technology" className={styles.navLink}>Technology</a>
+                    <a href="/#portfolio" className={styles.navLink}>Portfolio</a>
+                    <a href="/#roadmap" className={styles.navLink}>Roadmap</a>
+                    <Link href="/news" className={styles.navLink}>News</Link>
+                    <a href="/#contact" className={styles.ctaLink}>Contact</a>
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -54,10 +52,11 @@ export const Navbar = () => {
 
                 {/* Mobile Nav */}
                 <div className={clsx(styles.mobileNav, isMobileMenuOpen && styles.open)}>
-                    <a href="#leadership" onClick={() => setIsMobileMenuOpen(false)}>About</a>
-                    <a href="#technology" onClick={() => setIsMobileMenuOpen(false)}>Technology</a>
-                    <a href="#portfolio" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</a>
-                    <a href="#roadmap" onClick={() => setIsMobileMenuOpen(false)}>Roadmap</a>
+                    <a href="/#leadership" onClick={() => setIsMobileMenuOpen(false)}>About</a>
+                    <a href="/#technology" onClick={() => setIsMobileMenuOpen(false)}>Technology</a>
+                    <a href="/#portfolio" onClick={() => setIsMobileMenuOpen(false)}>Portfolio</a>
+                    <a href="/#roadmap" onClick={() => setIsMobileMenuOpen(false)}>Roadmap</a>
+                    <Link href="/news" onClick={() => setIsMobileMenuOpen(false)}>News</Link>
                 </div>
             </Container>
         </header>

@@ -8,6 +8,7 @@ import { TechnologyGrid } from "@/components/TechnologyGrid";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { LeadershipSection } from "@/components/LeadershipSection";
 import { RoadmapSection } from "@/components/RoadmapSection";
+import { NewsSection } from "@/components/NewsSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
 
+      <NewsSection />
       <AboutSection />
       <TechnologyGrid />
       <PortfolioSection />

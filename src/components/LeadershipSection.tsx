@@ -15,12 +15,12 @@ export const LeadershipSection = () => {
                         <div className={styles.portrait}>
                             <Image
                                 src="/assets/leader_ceo_ghibli_mid_age.png"
-                                alt="Simon Lee - CEO"
+                                alt="Peter Lee - CEO"
                                 fill
                                 className={styles.portraitImage}
                             />
                         </div>
-                        <h3 className={styles.name}>Simon Lee</h3>
+                        <h3 className={styles.name}>Peter Lee</h3>
                         <div className={styles.role}>CEO & CoFounder</div>
                     </div>
                     <div className={styles.leader}>

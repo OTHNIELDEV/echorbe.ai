@@ -28,9 +28,16 @@
 }
 
 .tagline {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
-    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    /* Brighter as requested */
+    font-size: 0.75rem;
+    /* Smaller font */
+    line-height: 1.5;
+}
+
+.tagline p {
+    margin: 0;
+    margin-bottom: 0.2rem;
 }
 
 .links h4,

@@ -29,11 +29,10 @@ export const HeroSection = () => {
                         </h1>
 
                         <p className={styles.subheadline}>
-                            We hold the core IP of Vision, Music, and Robotics.<br />
-                            Benchmarking the Alphabet Model.
+                            We hold the core IP of Vision, Emotion, Video, Music, and Robotics.<br />
                         </p>
                         {/* Tagline removed from here */}
-                        <span className={styles.subKorean}>비전, 음악, 로봇 공학의 핵심 IP를 보유한 글로벌 AI 지주회사.</span>
+                        <span className={styles.subKorean}>에콜브 홀딩스 - 비전, 감성, 영상, 음악, 로봇 공학의 핵심 IP를 보유한 글로벌 AI 기업</span>
 
                         <div className={styles.buttonGroup}>
                             <a href="#about">

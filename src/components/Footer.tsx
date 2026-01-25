@@ -13,7 +13,11 @@ export const Footer = () => {
                         <div className={styles.logo}>
                             <Logo />
                         </div>
-                        <p className={styles.tagline}>A Global AI Tech Holding Company.</p>
+                        <div className={styles.tagline}>
+                            <p>A Global AI Tech Holding Company.</p>
+                            <p>ECHORBE Advanced AI Research Institute (EAARI)</p>
+                            <p>Personal Physical Ontological Conscious AI</p>
+                        </div>
                     </div>
 
                     <div className={styles.links}>
@@ -39,8 +43,10 @@ export const Footer = () => {
                             <a href="#"><Github size={20} /></a>
                         </div>
                         <div className={styles.address}>
-                            Seoul, South Korea<br />
-                            contact@echorbe.ai
+                            <p>Pangyo AI Center</p>
+                            <p>Osan AI & Robotics Tech Institute</p>
+                            <p>South Korea</p>
+                            <p>contact@echorbe.ai</p>
                         </div>
                     </div>
                 </div>

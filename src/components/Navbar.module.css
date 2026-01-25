@@ -30,6 +30,13 @@
     letter-spacing: 0.1em;
 }
 
+@media (max-width: 768px) {
+    .logo svg {
+        height: 40px;
+        width: auto;
+    }
+}
+
 .highlight {
     color: var(--secondary);
 }

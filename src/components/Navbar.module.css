@@ -107,6 +107,8 @@
     background: none;
     border: none;
     cursor: pointer;
+    position: relative;
+    z-index: 1002;
 }
 
 @media(min-width: 768px) {

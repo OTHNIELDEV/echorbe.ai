@@ -20,20 +20,29 @@
     font-size: 1.25rem;
 }
 
-/* Governance Diagram */
+/* Governance Diagram Wrapper */
 .governanceDiagram {
     position: relative;
+    /* Height adjusts based on content/scaling, removed fixed height to let padding handle it or wrapper height */
     height: 700px;
-    /* Increased height */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    /* Prevent overflow during scale */
+}
+
+/* Fixed Coordinate System */
+.diagramWrapper {
+    width: 750px;
+    height: 750px;
+    position: relative;
+    /* This allows absolute positioning relative to this fixed box */
 }
 
 .sunNode {
     width: 200px;
-    /* Increased slightly */
     height: 200px;
     background: radial-gradient(circle at 30% 30%, #4B0082, #000);
     border: 2px solid var(--primary);
@@ -42,15 +51,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 2;
+    z-index: 5;
+    /* Higher z-index */
     box-shadow: 0 0 50px rgba(75, 0, 130, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sunLabel {
     color: #fff;
     font-weight: 700;
     font-size: 1.25rem;
-    /* Increased */
     letter-spacing: 0.1em;
 }
 
@@ -62,71 +75,84 @@
 
 .orbitRing {
     position: absolute;
-    width: 550px;
-    /* Increased ring size */
-    height: 550px;
+    width: 500px;
+    /* Radius ~250px */
+    height: 500px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .planetNode {
     position: absolute;
-    width: 140px;
-    /* Increased from 100px */
-    height: 140px;
-    background: rgba(20, 20, 20, 0.9);
+    width: 130px;
+    height: 130px;
+    background: rgba(20, 20, 20, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    /* Increased font */
+    font-size: 0.9rem;
     text-align: center;
     color: #ddd;
     font-weight: 600;
     transition: all 0.3s;
     line-height: 1.2;
-    padding: 1rem;
+    padding: 0.5rem;
+    top: 50%;
+    left: 50%;
+    margin-top: -65px;
+    /* Half of height */
+    margin-left: -65px;
+    /* Half of width */
+    z-index: 10;
 }
 
 .planetNode:hover {
     border-color: var(--primary);
     color: #fff;
-    background: rgba(0, 255, 255, 0.1);
-    transform: scale(1.1);
-    z-index: 10;
+    background: rgba(0, 255, 255, 0.15);
+    transform: scale(1.1) !important;
+    /* Override transform on hover needs care - actually better to apply scale to child or wrapper, but let's see */
+    z-index: 20;
+    box-shadow: 0 0 20px var(--primary);
 }
 
-/* Adjusted positions for larger ring */
+/* 
+   Radial Distribution using Transforms
+   Radius = 250px (Distance from center)
+   Scatter Mode: High Variance
+*/
+
+/* 1. Pictomusic - Moved to Bottom-Left/Left (Safe from top clipping) */
 .p1 {
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: rotate(190deg) translate(310px) rotate(-190deg);
 }
 
+/* 2. Sensor Labs - Far Right-Top */
 .p2 {
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: rotate(-20deg) translate(320px) rotate(20deg);
 }
 
+/* 3. Robotics - Bottom Right */
 .p3 {
-    left: 40px;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: rotate(70deg) translate(260px) rotate(-70deg);
 }
 
+/* 4. Video AI - Bottom Left (Inner-ish) */
 .p4 {
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
+    transform: rotate(130deg) translate(220px) rotate(-130deg);
 }
 
+/* 5. Edu AI - Top (Inner Ring) */
 .p5 {
-    top: 130px;
-    right: 130px;
+    transform: rotate(-85deg) translate(190px) rotate(85deg);
 }
+
 
 .grid {
     display: flex;
@@ -141,9 +167,16 @@
     }
 
     .governanceDiagram {
-        transform: scale(0.6);
-        margin-bottom: -100px;
-        /* Fix spacing after scale */
+        height: 400px;
+        /* Reduce container height on mobile */
+        margin-bottom: 0;
+    }
+
+    .diagramWrapper {
+        /* Scale down the 750px wrapper to fit mobile width */
+        /* If screen is ~390px, 0.5 scale = ~375. */
+        transform: scale(0.48);
+        transform-origin: center center;
     }
 }
 

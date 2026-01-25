@@ -15,22 +15,25 @@ export const AboutSection = () => {
                 </div>
 
                 {/* Sun & Planets Diagram Replacement (CSS Implementation) */}
+                {/* Sun & Planets Diagram Replacement (CSS Implementation) */}
                 <div className={styles.governanceDiagram}>
-                    {/* Sun (Holdings) */}
-                    <div className={styles.sunNode}>
-                        <div className={styles.sunLabel}>HOLDINGS</div>
-                        <div className={styles.sunSub}>IP & R&D</div>
+                    <div className={styles.diagramWrapper}>
+                        {/* Sun (Holdings) */}
+                        <div className={styles.sunNode}>
+                            <div className={styles.sunLabel}>HOLDINGS</div>
+                            <div className={styles.sunSub}>IP & R&D</div>
+                        </div>
+
+                        {/* Orbit Ring */}
+                        <div className={styles.orbitRing}></div>
+
+                        {/* Planet Nodes */}
+                        <div className={`${styles.planetNode} ${styles.p1}`}>Pictomusic</div>
+                        <div className={`${styles.planetNode} ${styles.p2}`}>Sensor Labs</div>
+                        <div className={`${styles.planetNode} ${styles.p3}`}>Robotics</div>
+                        <div className={`${styles.planetNode} ${styles.p4}`}>Video AI</div>
+                        <div className={`${styles.planetNode} ${styles.p5}`}>Edu AI</div>
                     </div>
-
-                    {/* Orbit Ring */}
-                    <div className={styles.orbitRing}></div>
-
-                    {/* Planet Nodes */}
-                    <div className={`${styles.planetNode} ${styles.p1}`}>Pictomusic</div>
-                    <div className={`${styles.planetNode} ${styles.p2}`}>Sensor Labs</div>
-                    <div className={`${styles.planetNode} ${styles.p3}`}>Robotics</div>
-                    <div className={`${styles.planetNode} ${styles.p4}`}>Video AI</div>
-                    <div className={`${styles.planetNode} ${styles.p5}`}>Edu AI</div>
                 </div>
 
                 <div className={styles.grid}>

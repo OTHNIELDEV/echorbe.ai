@@ -1,3 +1,11 @@
+.section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/roadmap_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect for premium feel */
+}
+
 .header {
     margin-bottom: 5rem;
     text-align: center;
@@ -82,6 +90,11 @@
 }
 
 @media (min-width: 768px) {
+    .section {
+        padding: 6rem 0;
+        /* consistent padding */
+    }
+
     .timeline::before {
         left: 50%;
         transform: translateX(-50%);

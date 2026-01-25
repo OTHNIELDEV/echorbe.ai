@@ -40,7 +40,7 @@ const milestones = [
 
 export const RoadmapSection = () => {
     return (
-        <SectionWrapper id="roadmap">
+        <SectionWrapper id="roadmap" className={styles.section}>
             <Container>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Strategic Roadmap</h2>

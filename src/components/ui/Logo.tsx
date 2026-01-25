@@ -3,39 +3,52 @@ import React from 'react';
 export const Logo = ({ className }: { className?: string }) => {
     return (
         <svg
-            width="150"
-            height="65"
-            viewBox="0 0 150 65"
+            width="170"
+            height="80"
+            viewBox="0 0 170 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className={className}
+            aria-label="Echorbe Logo"
         >
-            {/* "ech" text - Centered vertically relative to the new height */}
+            {/* Defs for cleaner text rendering */}
+            <defs>
+                <style>
+                    {`
+                        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600&display=swap');
+                        .logo-text { font-family: 'Outfit', sans-serif; }
+                    `}
+                </style>
+            </defs>
+
+            {/* 'ech' text: Red (#FF2D2D) */}
             <text
-                x="0"
-                y="42"
-                fontFamily="sans-serif"
+                x="10"
+                y="49"
+                className="logo-text"
                 fontWeight="500"
-                fontSize="38"
+                fontSize="48"
                 fill="#FF2D2D"
-                style={{ letterSpacing: '-2px' }}
+                letterSpacing="-2"
             >
                 ech
             </text>
 
-            {/* Red Circle - Larger (Radius 30) */}
-            <circle cx="88" cy="32.5" r="30" fill="#FF2D2D" />
+            {/* Red Circle */}
+            {/* Moved down further (cy=43) */}
+            <circle cx="108" cy="43" r="32" fill="#FF2D2D" />
 
-            {/* "rbe" text inside circle - Centered */}
+            {/* 'rbe' text: White, centered in circle */}
+            {/* Increased size (33) and moved (y=50) */}
             <text
-                x="88"
-                y="42"
-                fontFamily="sans-serif"
+                x="108"
+                y="50"
+                className="logo-text"
                 fontWeight="500"
-                fontSize="30"
+                fontSize="33"
                 fill="white"
                 textAnchor="middle"
-                style={{ letterSpacing: '-0.5px' }}
+                letterSpacing="-1"
             >
                 rbe
             </text>

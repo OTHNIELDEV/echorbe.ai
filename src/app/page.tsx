@@ -11,7 +11,7 @@ import { RoadmapSection } from "@/components/RoadmapSection";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col bg-[#051025] text-white">
+    <main className="min-h-screen flex flex-col text-white">
       <Navbar />
       <HeroSection />
 

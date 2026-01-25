@@ -16,11 +16,14 @@ export const HeroSection = () => {
                 <div className={styles.grid}>
                     <motion.div
                         className={styles.textContent}
-                        initial={{ opacity: 0, x: -30 }} // Cinematic slide in
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1, ease: "easeOut" }}
+                    // initial={{ opacity: 0, x: -30 }} 
+                    // animate={{ opacity: 1, x: 0 }}
+                    // transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <div className={styles.label}>ECHORBE Advanced AI Research Institute (EAARI)</div>
+                        <div className={styles.labelGroup}>
+                            <div className={styles.label}>ECHORBE Advanced AI Research Institute (EAARI)</div>
+                            <div className={styles.aiTagline}>Personal Physical Ontological Conscious AI</div>
+                        </div>
                         <h1 className={styles.headline}>
                             echorbe <span className={styles.highlight}>holdings</span>
                         </h1>
@@ -29,9 +32,7 @@ export const HeroSection = () => {
                             We hold the core IP of Vision, Music, and Robotics.<br />
                             Benchmarking the Alphabet Model.
                         </p>
-                        <div className={styles.taglineContainer}>
-                            <span className={styles.tagline}>Personal Physical Ontological Conscious AI</span>
-                        </div>
+                        {/* Tagline removed from here */}
                         <span className={styles.subKorean}>비전, 음악, 로봇 공학의 핵심 IP를 보유한 글로벌 AI 지주회사.</span>
 
                         <div className={styles.buttonGroup}>

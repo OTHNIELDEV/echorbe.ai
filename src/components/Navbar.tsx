@@ -24,7 +24,14 @@ export const Navbar = () => {
         <header className={clsx(styles.header, isScrolled && styles.scrolled)}>
             <Container className={styles.container}>
                 <div className={styles.logo}>
-                    <Link href="/" className={styles.logoLink}>
+                    <Link
+                        href="/"
+                        className={styles.logoLink}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                    >
                         <Logo />
                     </Link>
                 </div>

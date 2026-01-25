@@ -1,0 +1,175 @@
+.section {
+    padding: 10rem 0;
+    background: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 1.25rem;
+}
+
+/* Governance Diagram */
+.governanceDiagram {
+    position: relative;
+    height: 700px;
+    /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.sunNode {
+    width: 200px;
+    /* Increased slightly */
+    height: 200px;
+    background: radial-gradient(circle at 30% 30%, #4B0082, #000);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: 0 0 50px rgba(75, 0, 130, 0.5);
+}
+
+.sunLabel {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    /* Increased */
+    letter-spacing: 0.1em;
+}
+
+.sunSub {
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.orbitRing {
+    position: absolute;
+    width: 550px;
+    /* Increased ring size */
+    height: 550px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.planetNode {
+    position: absolute;
+    width: 140px;
+    /* Increased from 100px */
+    height: 140px;
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    /* Increased font */
+    text-align: center;
+    color: #ddd;
+    font-weight: 600;
+    transition: all 0.3s;
+    line-height: 1.2;
+    padding: 1rem;
+}
+
+.planetNode:hover {
+    border-color: var(--primary);
+    color: #fff;
+    background: rgba(0, 255, 255, 0.1);
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+/* Adjusted positions for larger ring */
+.p1 {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.p2 {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.p3 {
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.p4 {
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.p5 {
+    top: 130px;
+    right: 130px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    .governanceDiagram {
+        transform: scale(0.6);
+        margin-bottom: -100px;
+        /* Fix spacing after scale */
+    }
+}
+
+.infoCard {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2rem;
+    border-radius: 12px;
+    flex: 1;
+    text-align: center;
+    max-width: 300px;
+}
+
+.icon {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    width: 32px;
+    height: 32px;
+}
+
+.infoCard h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.infoCard p {
+    font-size: 0.9rem;
+    color: #aaa;
+}

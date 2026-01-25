@@ -1,0 +1,77 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    /* Sharper corners for modern feel */
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-family: var(--font-body);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Variants */
+.primary {
+    background-color: #fff;
+    color: #000;
+}
+
+.primary:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background-color: #333;
+    color: #fff;
+}
+
+.secondary:hover {
+    background-color: #444;
+}
+
+.outline {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.outline:hover {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Ghost Variant for Infinite Void Theme */
+.ghost {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    backdrop-filter: blur(4px);
+}
+
+.ghost:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Sizes */
+.sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+.md {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+}
+
+.lg {
+    padding: 1rem 2.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}

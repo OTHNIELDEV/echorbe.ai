@@ -1,0 +1,106 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 2rem 0;
+    transition: all 0.5s ease;
+}
+
+.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+}
+
+.highlight {
+    color: var(--secondary);
+}
+
+.desktopNav {
+    display: none;
+    gap: 3rem;
+}
+
+@media(min-width: 768px) {
+    .desktopNav {
+        display: flex;
+    }
+}
+
+.navLink {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navLink:hover {
+    color: #fff;
+}
+
+/* Minimal Line Hover Effect */
+.navLink::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+}
+
+.ctaLink {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6rem 1.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    /* Ghost Button Style */
+    background: transparent;
+}
+
+.ctaLink:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.mobileToggle {
+    color: #fff;
+    background: none;
+    border: none;
+}
+
+@media(min-width: 768px) {
+    .mobileToggle {
+        display: none;
+    }
+}

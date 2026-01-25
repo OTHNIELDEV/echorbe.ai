@@ -1,0 +1,10 @@
+.section {
+    padding: 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.darker {
+    background-color: #020817;
+    /* Even darker than main background for contrast */
+}

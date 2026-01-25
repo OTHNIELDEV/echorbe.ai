@@ -1,0 +1,171 @@
+.section {
+    padding: 10rem 0;
+    background: black;
+}
+
+.leaderGrid {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 10rem;
+}
+
+@media(max-width: 768px) {
+    .leaderGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.leader {
+    text-align: center;
+}
+
+.portrait {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 3px solid #333;
+    transition: all 0.3s;
+    background: #111;
+}
+
+.portrait:hover {
+    border-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.portraitImage {
+    object-fit: cover;
+    filter: grayscale(100%);
+    /* Force B&W for style */
+    transition: filter 0.3s;
+}
+
+.portrait:hover .portraitImage {
+    filter: grayscale(0%);
+    /* Reveal color on hover if wanted, or keep B&W */
+}
+
+.name {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    color: var(--muted);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Roadmap */
+.roadmapBlock {
+    text-align: center;
+    position: relative;
+    padding: 6rem 2rem;
+    border-radius: 32px;
+    /* Photo Background with Overlay */
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url('/assets/roadmap_bg.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.roadmapTitle {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    /* Remove gradient text for better readability on photo */
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 10;
+}
+
+.roadmapLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.line {
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.1));
+}
+
+.point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border: 2px solid #fff;
+    /* Changed to White for contrast */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.point:hover .dot {
+    transform: scale(1.2);
+    background: #fff;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.date {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.event {
+    color: #ccc;
+    /* Lighter text for better contrast */
+    font-size: 0.9rem;
+    max-width: 140px;
+    line-height: 1.4;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile Responsive */
+@media(max-width: 768px) {
+    .roadmapLine {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .line {
+        width: 2px;
+        height: 80px;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    }
+
+    .roadmapBlock {
+        padding: 4rem 1rem;
+    }
+}

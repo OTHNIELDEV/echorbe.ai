@@ -1,0 +1,185 @@
+.section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: transparent;
+}
+
+.contentContainer {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 968px) {
+    .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.textContent {
+    display: flex;
+    flex-direction: column;
+    /* Clean: No backdrop, no padding */
+}
+
+@media (max-width: 968px) {
+    .textContent {
+        align-items: center;
+    }
+}
+
+.label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+    background: var(--accent-mix);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.headline {
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+}
+
+.highlight {
+    font-weight: 400;
+    color: #444;
+    /* Dark Color as requested (Dark Grey) */
+    font-size: 0.5em;
+    /* Smaller */
+    text-shadow: none;
+    /* Remove shadow */
+    vertical-align: middle;
+    /* Align with text */
+}
+
+.subheadline {
+    font-size: 1.45rem;
+    color: #444444;
+    /* Dark Grey as requested */
+    max-width: 650px;
+    line-height: 1.5;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.25rem;
+    color: #FF2D2D;
+    /* Matching the logo red for emphasis or dark grey? Let's go with Red as in the logo image "AI" is red */
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.taglineContainer {
+    margin-bottom: 1rem;
+}
+
+.subKorean {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    font-size: 1.15rem;
+    color: #444444;
+    /* Dark Grey as requested */
+    font-weight: 700;
+    opacity: 1;
+    letter-spacing: -0.01em;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Custom Button Styles - Thin Dark Border */
+.primaryBtn {
+    border: 1px solid #111 !important;
+    /* Thin Dark Border */
+    font-weight: 600;
+}
+
+.primaryBtn:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.techBtn {
+    background: #e0e0e0 !important;
+    color: #111 !important;
+    border: 1px solid #111 !important;
+    /* Thin Dark Border (Changed from 2px) */
+    font-weight: 600;
+}
+
+.techBtn:hover {
+    background: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.visualContent {
+    height: 700px;
+    width: 100%;
+    position: relative;
+}
+
+/* Aurora Backdrop behind heavy 3D */
+.visualContent::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.05), transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+.scrollIndicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.8;
+}
+
+.scrollText {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.line {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--primary), transparent);
+}

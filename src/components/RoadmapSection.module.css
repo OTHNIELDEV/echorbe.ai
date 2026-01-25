@@ -1,0 +1,113 @@
+.header {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--foreground);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary), transparent);
+}
+
+.milestone {
+    position: relative;
+    padding-left: 60px;
+    padding-bottom: 4rem;
+}
+
+.milestone:last-child {
+    padding-bottom: 0;
+}
+
+.marker {
+    position: absolute;
+    left: 11px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: var(--background);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    z-index: 10;
+}
+
+.phase {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.milestoneTitle {
+    font-size: 1.5rem;
+    color: var(--foreground);
+    margin-bottom: 0.75rem;
+}
+
+.milestoneDesc {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.subDesc {
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .milestone {
+        padding-left: 0;
+        width: 50%;
+    }
+
+    .milestone:nth-child(even) {
+        margin-left: 50%;
+        padding-left: 3rem;
+    }
+
+    .milestone:nth-child(odd) {
+        text-align: right;
+        padding-right: 3rem;
+    }
+
+    .milestone:nth-child(odd) .marker {
+        left: auto;
+        right: -10px;
+    }
+
+    .milestone:nth-child(even) .marker {
+        left: -10px;
+    }
+}

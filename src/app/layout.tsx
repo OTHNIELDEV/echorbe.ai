@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Outfit } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`} suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        {children}
+        <Script src="https://ghostlink-dev.vercel.app/api/bridge/76d49279-02ef-4f08-867b-637c54d67195.js" />
+      </body>
     </html>
   )
 }
